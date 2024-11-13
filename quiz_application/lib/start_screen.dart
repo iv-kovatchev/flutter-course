@@ -5,8 +5,9 @@ const endAlignment = Alignment.bottomRight;
 
 class StartScreen extends StatelessWidget {
   //final List<Color> colors;
+  final void Function() startQuiz;
 
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +15,6 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Opacity(
-          //   opacity: 0.6,
-          //   child: Image.asset(
-          //     'assets/images/quiz-logo.png',
-          //     width: 300,
-          //   ),
-          // ),
           Image.asset(
             'assets/images/quiz-logo.png',
             color: const Color.fromARGB(150, 255, 255, 255),
@@ -34,7 +28,7 @@ class StartScreen extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
             icon: const Icon(Icons.arrow_right_alt),
             label: const Text('Start Quiz'),
