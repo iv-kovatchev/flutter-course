@@ -2,8 +2,7 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.0-blue?style=for-the-badge&logo=flutter)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-2.18-blue?style=for-the-badge&logo=dart)](https://dart.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/your-username/your-repo-name?style=for-the-badge)](https://github.com/your-username/your-repo-name/stargazers)
+[![Stars](https://img.shields.io/github/stars/iv-kovatchev/flutter-course?style=for-the-badge)](https://github.com/iv-kovatchev/flutter-course/stargazers)
 
 ---
 
