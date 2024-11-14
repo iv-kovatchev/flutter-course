@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const startAligment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -21,10 +22,12 @@ class StartScreen extends StatelessWidget {
             width: 300,
           ),
           const SizedBox(height: 80),
-          const Text(
+          Text(
             'Learn Flutter the fun way!',
-            style: TextStyle(
-                color: Color.fromARGB(255, 237, 223, 252), fontSize: 24),
+            style: GoogleFonts.lato(
+              color: const Color.fromARGB(255, 201, 153, 251),
+              fontSize: 24,
+            ),
           ),
           const SizedBox(height: 30),
           OutlinedButton.icon(
