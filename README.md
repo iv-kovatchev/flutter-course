@@ -11,9 +11,9 @@ This repository contains several projects created as part of a **Flutter course*
 ## 📁 Projects Included
 
 1. **Project 1: Roll Dice App**
-   - Basic moible app where you can roll dice.
+   - Basic mobile app where you can roll dice.
    
 2. **Project 2: QUIZ App**
-   - Still in progress...
+   - Simple basic mobile app for learning some of the fundamentals of Dart and Flutter. You have QUIZ with 6 questions with 4 answers. At the end it shows the result
 
 ## 🚀 Getting Started
