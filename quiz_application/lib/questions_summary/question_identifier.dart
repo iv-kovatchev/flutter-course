@@ -27,6 +27,6 @@ class QuestionIdentifier extends StatelessWidget {
           color: Color.fromARGB(255, 22, 2, 56)
         ),
       ),
-    )
+    );
   }
 }
