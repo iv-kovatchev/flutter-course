@@ -17,5 +17,6 @@ This repository contains several projects created as part of a **Flutter course*
    - Simple basic mobile app for learning some of the fundamentals of Dart and Flutter. You have QUIZ with 6 questions with 4 answers. At the end it shows the result
   
 3. **Project 3: Expense Tracker App**
+   - IN PROGRESS...
 
 ## 🚀 Getting Started
