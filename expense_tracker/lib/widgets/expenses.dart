@@ -42,6 +42,8 @@ class _ExpensesState extends State<Expenses> {
       isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(_addExpense),
+      constraints: const BoxConstraints(maxWidth: double.infinity),
+      useSafeArea: true,
     );
   }
 
@@ -79,6 +81,8 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
     Widget mainContent = const Center(
       child: Text('No expenses found. Start adding some!'),
     );
@@ -88,22 +92,34 @@ class _ExpensesState extends State<Expenses> {
     }
 
     return (Scaffold(
-        appBar: AppBar(
-          title: const Text('Expense Tracker'),
-          actions: [
-            IconButton(
-              onPressed: _openAddExpenseOverlay,
-              icon: const Icon(Icons.add),
+      appBar: AppBar(
+        title: const Text('Expense Tracker'),
+        actions: [
+          IconButton(
+            onPressed: _openAddExpenseOverlay,
+            icon: const Icon(Icons.add),
+          )
+        ],
+      ),
+      body: width < 600
+          ? Column(
+              children: [
+                Chart(_registeredExpenses),
+                Expanded(
+                  child: mainContent,
+                ),
+              ],
             )
-          ],
-        ),
-        body: Column(
-          children: [
-            Chart(_registeredExpenses),
-            Expanded(
-              child: mainContent,
+          : Row(
+              children: [
+                Expanded(
+                  child: Chart(_registeredExpenses),
+                ),
+                Expanded(
+                  child: mainContent,
+                ),
+              ],
             ),
-          ],
-        )));
+    ));
   }
 }
