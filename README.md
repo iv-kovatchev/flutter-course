@@ -14,9 +14,12 @@ This repository contains several projects created as part of a **Flutter course*
    - Basic mobile app where you can roll dice.
    
 2. **Project 2: QUIZ App**
-   - Simple basic mobile app for learning some of the fundamentals of Dart and Flutter. You have QUIZ with 6 questions with 4 answers. At the end it shows the result
+   - Simple basic mobile app for learning some of the fundamentals of Dart and Flutter. You have QUIZ with 6 questions with 4 answers. In the end it shows the result.
   
 3. **Project 3: Expense Tracker App**
+   - A basic mobile app with a list of expenses and a chart to see all expense prices by category. Also, we can add new expenses or delete existing ones.
+  
+4. **Project 4: Meals App**
    - IN PROGRESS...
-
+  
 ## 🚀 Getting Started
