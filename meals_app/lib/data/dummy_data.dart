@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/models/category.dart';
+import 'package:meals_app/models/filter.dart';
 import 'package:meals_app/models/meal.dart';
 
 const availableCategories = [
@@ -404,4 +405,23 @@ const dummyMeals = [
     isVegetarian: true,
     isLactoseFree: true,
   ),
+];
+
+List<Filter> filters = [
+  Filter(
+      title: 'Gluten-free',
+      description: 'Only include gluten-free meals.',
+      isChecked: false),
+  Filter(
+      title: 'Lactose-free',
+      description: 'Only include lactose-free meals.',
+      isChecked: false),
+  Filter(
+      title: 'Vegeterian',
+      description: 'Only include vegeterian meals.',
+      isChecked: false),
+  Filter(
+      title: 'Vegan',
+      description: 'Only include vegan meals.',
+      isChecked: false),
 ];

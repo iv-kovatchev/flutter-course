@@ -1,31 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/data/dummy_data.dart';
 import 'package:meals_app/models/filter.dart';
-
-enum FilterEnum {
-  glutenFree,
-  lactoseFree,
-  vegeterian,
-  vegan,
-}
-
-List<Filter> filters = [
-  Filter(
-      title: 'Gluten-free',
-      description: 'Only include gluten-free meals.',
-      isChecked: false),
-  Filter(
-      title: 'Lactose-free',
-      description: 'Only include lactose-free meals.',
-      isChecked: false),
-  Filter(
-      title: 'Vegeterian',
-      description: 'Only include vegeterian meals.',
-      isChecked: false),
-  Filter(
-      title: 'Vegan',
-      description: 'Only include vegan meals.',
-      isChecked: false),
-];
 
 class FiltersScreen extends StatefulWidget {
   const FiltersScreen({super.key});
