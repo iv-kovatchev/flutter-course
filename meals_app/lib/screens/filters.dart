@@ -1,40 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meals_app/data/dummy_data.dart';
-import 'package:meals_app/models/filter.dart';
 import 'package:meals_app/providers/filters_provider.dart';
 
-class FiltersScreen extends ConsumerStatefulWidget {
+class FiltersScreen extends ConsumerWidget {
   const FiltersScreen({super.key});
 
-  @override
-  ConsumerState<FiltersScreen> createState() => _FiltersScreenState();
-}
 
-class _FiltersScreenState extends ConsumerState<FiltersScreen> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final filters = ref.watch(filtersProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Filters'),
       ),
-      body: PopScope<List<Filter>>(
-        canPop: false,
-        onPopInvokedWithResult: (bool didPop, dynamic result) {
-          if (didPop) return;
-
-          ref.read(filtersProvider.notifier).setFilters(filters);
-          Navigator.of(context).pop(filters);
-        },
-        child: Column(
+      body: 
+        Column(
           children: filters.map(
             (filter) {
               return SwitchListTile(
                 value: filter.isChecked,
                 onChanged: (isChecked) {
-                  setState(() {
                     filter.isChecked = isChecked;
-                  });
+                    ref.read(filtersProvider.notifier).setFilter(filter);
                 },
                 title: Text(
                   filter.title,
@@ -54,7 +42,6 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
             },
           ).toList(),
         ),
-      ),
     );
   }
 }

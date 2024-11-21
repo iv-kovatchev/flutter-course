@@ -409,18 +409,22 @@ const dummyMeals = [
 
 List<Filter> filters = [
   Filter(
+      id: 1,
       title: 'Gluten-free',
       description: 'Only include gluten-free meals.',
       isChecked: false),
   Filter(
+      id: 2,
       title: 'Lactose-free',
       description: 'Only include lactose-free meals.',
       isChecked: false),
   Filter(
+      id: 3,
       title: 'Vegeterian',
       description: 'Only include vegeterian meals.',
       isChecked: false),
   Filter(
+      id: 4,
       title: 'Vegan',
       description: 'Only include vegan meals.',
       isChecked: false),
