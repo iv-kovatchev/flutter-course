@@ -6,6 +6,8 @@ import 'package:shopping_list/models/grocery_item.dart';
 import 'package:shopping_list/widgets/new_item.dart';
 import 'package:http/http.dart' as http;
 
+const String basicUrl = 'flutter-prop-c90b1-default-rtdb.firebaseio.com';
+
 class GroceryList extends StatefulWidget {
   const GroceryList({super.key});
 
@@ -27,15 +29,17 @@ class _GroceryListState extends State<GroceryList> {
   }
 
   void _loadItems() async {
-    final url = Uri.https('abc.flutter-prop-c90b1-default-rtdb.firebaseio.com',
-        '/shopping-list.json');
+    final url = Uri.https(basicUrl, '/shopping-list.json');
 
     try {
       final response = await http.get(url);
-      print(response.statusCode);
 
       if (response.statusCode >= 400) {
         throw Error();
+      } else if (response.body == "null") {
+        setState(() {
+          _isLoading = false;
+        });
       } else {
         final Map<String, dynamic> listData = json.decode(response.body);
 
@@ -62,7 +66,7 @@ class _GroceryListState extends State<GroceryList> {
       }
     } catch (err) {
       setState(() {
-        _error = 'Failed to fetch data. Please try again later!';
+        _error = 'Something went wrong. Please try again later!';
       });
 
       return;
@@ -85,12 +89,29 @@ class _GroceryListState extends State<GroceryList> {
     });
   }
 
-  void _removeItem(GroceryItem item) {
-    setState(
-      () {
-        _groceryItems.remove(item);
-      },
-    );
+  void _removeItem(GroceryItem item) async {
+    final url = Uri.https(basicUrl, '/shopping-list/${item.id}.json');
+
+    try {
+      final getResponse = await http.get(url);
+
+      if (getResponse.statusCode >= 400 || getResponse.body == "null") {
+        throw Error();
+      }
+
+      http.delete(url);
+      setState(
+        () {
+          _groceryItems.remove(item);
+        },
+      );
+    } catch (err) {
+      setState(() {
+        _error = 'Failed to fetch data. Please try again later!';
+      });
+
+      return;
+    }
   }
 
   @override
