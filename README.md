@@ -30,4 +30,7 @@ This repository contains several projects created as part of a **Flutter course*
 6. **Project 6: Favorite Places App**
    - IN PROGRESS...
   
-## 🚀 Getting Started
+## 🖼️ Screenshots
+<img src="https://github.com/user-attachments/assets/f9d33e9c-1b52-4094-8db2-fdd764f1aa84" alt="Image" style="width: 200px;"/>
+<img src="https://github.com/user-attachments/assets/73bbc287-1017-4f4d-8cac-8f4367601965" alt="Image" style="width: 200px;"/>
+
