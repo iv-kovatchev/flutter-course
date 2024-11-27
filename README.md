@@ -20,6 +20,11 @@ This repository contains several projects created as part of a **Flutter course*
    - A basic mobile app with a list of expenses and a chart to see all expense prices by category. Also, we can add new expenses or delete existing ones.
   
 4. **Project 4: Meals App**
-   - IN PROGRESS...
+   - Small mobile app with five screens - Categories, Filters, Meal Details, Meals, Tabs. Using the Riverpod package for creating state management where we add our global states.
+     Also, add explicit and implicit animations.
+
+5. **Project 5: Shopping List App**
+   - Basic mobile app where we have a list of items, we can add new items and delete the ones in the list. We are using the Form Widget coming from Flutter for the form and
+     we are setting up a small backend in Firebase, so we interact with the items by CRUD operations.
   
 ## 🚀 Getting Started
