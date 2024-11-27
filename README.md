@@ -26,5 +26,8 @@ This repository contains several projects created as part of a **Flutter course*
 5. **Project 5: Shopping List App**
    - Basic mobile app where we have a list of items, we can add new items and delete the ones in the list. We are using the Form Widget coming from Flutter for the form and
      we are setting up a small backend in Firebase, so we interact with the items by CRUD operations.
+
+6. **Project 6: Favorite Places App**
+   - IN PROGRESS...
   
 ## 🚀 Getting Started
